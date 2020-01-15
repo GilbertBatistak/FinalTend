@@ -1,9 +1,15 @@
 import unittest
+import collections
 
-def IsAnagram(a):
+def IsAnagram(lis):
     count = 0
-    if a[0] == a[1]:
-        count += 1
+    ana = collections.defaultdict(list)
+    for a in lis:
+        ana[tuple(sorted(a))].append(a)
+    for i in range(len(list(ana.values()))):
+        if  len(list(ana.values())[i]) > 1:
+            count += 1
+
     return count
 
 class MyAnagramTests(unittest.TestCase):
@@ -15,8 +21,12 @@ class MyAnagramTests(unittest.TestCase):
         a = ["", "a"]
         self.assertEqual(IsAnagram(a), 0)
 
-    def test_ElementAandElementBAreNone(self):
-        a=[None, None]
+    def test_ElementAandElementBAreSameAndCIsDifferent(self):
+        a=["a", "a", "b"]
         self.assertEqual(IsAnagram(a), 1)
+
+    def test_FistAndSecondElementAreTheSameAndThirdAndFourthToo(self):
+        a=[None, "a", "b", "b"]
+        self.assertEqual(IsAnagram(a), 2)
     
 unittest.main()
