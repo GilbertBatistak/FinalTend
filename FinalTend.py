@@ -26,7 +26,11 @@ class MyAnagramTests(unittest.TestCase):
         self.assertEqual(IsAnagram(a), 1)
 
     def test_FistAndSecondElementAreTheSameAndThirdAndFourthToo(self):
-        a=[None, "a", "b", "b"]
+        a=["a", "a", "b", "b"]
         self.assertEqual(IsAnagram(a), 2)
+    
+    def test_SevenAnagrams(self):
+        a=["paste", "pates", "peats" ,"septa" ,"spate","tapes", "tepas"]
+        self.assertEqual(IsAnagram(a), 1)
     
 unittest.main()
