@@ -14,5 +14,9 @@ class MyAnagramTests(unittest.TestCase):
     def test_AElementAndBElementAreDiffent(self):
         a = ["", "a"]
         self.assertEqual(IsAnagram(a), 0)
+
+    def test_ElementAandElementBAreNone(self):
+        a=[None, None]
+        self.assertEqual(IsAnagram(a), 1)
     
 unittest.main()
