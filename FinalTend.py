@@ -33,4 +33,8 @@ class MyAnagramTests(unittest.TestCase):
         a=["paste", "pates", "peats" ,"septa" ,"spate","tapes", "tepas"]
         self.assertEqual(IsAnagram(a), 1)
     
+    def test_Pos1Pos2AreAnagramsPost3Post4AreDifAnagramPost5Post6AreDifAnagramsPost7Post8AreDifAnagram(self):
+        a=["paste", "pates", "kinship", "pinkish" ,"enlist", "inlets", "boaster" ,"boaters"]
+        self.assertEqual(IsAnagram(a), 4)
+    
 unittest.main()
