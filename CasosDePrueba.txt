@@ -1,0 +1,30 @@
+Casos de prueba
+
+Caso #1: Ejecutar el programa sin pasarle archivo que leer
+
+Input:python Anagrama.py
+Output: "Argument one missing"
+
+Caso #2: Ejecutar el programa con el archivo Anagrama1.txt el cual esta vacio
+
+Input: python Anagrama.py Anagrama1.txt
+Output: 0
+
+Caso #3: Ejecutar el programa con el archivo Anagrama2.txt el cual no contiene anagramas
+
+Input: python Anagrama.py Anagrama2.txt
+Output: 0
+
+Caso #3: Ejecutar el programa con el archivo Anagrama2.txt el cual contiene 1 set de anagramas
+
+Input: python Anagrama.py Anagrama1.txt
+Output: "las sal"
+	1
+
+Caso #3: Ejecutar el programa con el archivo Anagrama2.txt el cual contiene 2 set de anagramas
+
+Input: python Anagrama.py Anagrama1.txt
+Output: "Las Sal"
+	"Agonista Santiago"
+	2
+
